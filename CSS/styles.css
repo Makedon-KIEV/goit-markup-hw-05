@@ -345,23 +345,23 @@ svg {
 
 .activity-overlay {
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
   min-width: 100%;
-  padding-top: calc(1rem + 11px);
-  padding-right: clamp((0.4rem + 1px), 2vw, (1rem - 1px));
-  padding-bottom: calc(1rem + 11px);
-  padding-left: clamp((0.4rem + 1px), 2vw, (1rem - 1px));
+  padding-top: 27px;
+  padding-right: 82px;
+  padding-bottom: 27px;
+  padding-left: ;
   overflow: hidden;
   word-wrap: break-word;
   background-color: rgba(47, 48, 58, 0.8);
 }
 .activity-list-label {
-  font-size: 0.875rem;
+  /*  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.17;
   color: var(--color-white);
   text-align: center;
-  text-transform: uppercase;
+  text-transform: uppercase; */
 }
 /*=================END  What we do ==============*/
 /*=====================Team=====================*/
