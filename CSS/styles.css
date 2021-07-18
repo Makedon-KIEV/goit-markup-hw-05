@@ -344,36 +344,37 @@ svg {
 }
 
 .activity-overlay {
-  position: absolute;
+  /*   position: absolute;
   /* bottom: 0; */
   min-width: 100%;
   padding-top: 27px;
   padding-right: 82px;
   padding-bottom: 27px;
-  padding-left: ;
+  padding-left: 83px;
   overflow: hidden;
   word-wrap: break-word;
   background-color: rgba(47, 48, 58, 0.8);
+  /* color: #2f303a; */
 }
 .activity-list-label {
-  /*  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.17;
-  color: var(--color-white);
+  color: var(--back-color);
   text-align: center;
-  text-transform: uppercase; */
+  text-transform: uppercase;
 }
 /*=================END  What we do ==============*/
 /*=====================Team=====================*/
 
-/* .team-list {
+.team-list {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
- */
+
 .section-team {
   background-color: var(--widgets-link-background-color);
 }
