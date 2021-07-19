@@ -31,6 +31,7 @@
   --job-img-overlay-bg-color: rgba(47, 48, 58, 0.8);
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --hero-button-hover-color: #188ce8;
+  --modal-button-border: rgba(0, 0, 0, 0.1);
 }
 
 h1,
@@ -830,11 +831,56 @@ svg {
 
 /*========================backdrop ====================*/
 
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vw;
-  background-color: blueviolet;
+  height: 100vh;
+  background-color: var(--shadow-three);
+
+  transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
 }
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background-color: var(--back-color);
+
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--modal-button-border);
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.close-vector {
+  width: 11px;
+  height: 11px;
+  fill: var(--black-black);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/*=============End Backdrop=============*/
