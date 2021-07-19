@@ -247,14 +247,7 @@ svg {
   padding-bottom: 10px;
   border: none;
 }
-.hero-button-go {
-  font-size: 16px;
-  line-height: 1.9;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--back-color);
-} */
+ */
 
 .modal-btn {
   font-weight: 700;
