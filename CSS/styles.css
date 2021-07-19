@@ -27,7 +27,10 @@
     0px 2px 2px rgba(0, 0, 0, 0.12);
   --portfolio-flex-element-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  --portfolio-overlay-bg-color: rgba(33, 150, 243, 0.9);
   --job-img-overlay-bg-color: rgba(47, 48, 58, 0.8);
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --hero-button-hover-color: #188ce8;
 }
 
 h1,
@@ -161,6 +164,7 @@ svg {
   letter-spacing: 0.02em;
   color: var(--text-color);
   margin-right: auto;
+  transition: fill 250ms var(--cubic);
 }
 
 .menu-item-link:hover,
@@ -186,6 +190,7 @@ svg {
 }
 .menu-icons {
   margin-right: 10px;
+  transition: fill 250ms var(--cubic);
 }
 
 /*=====================HERO=======================*/
@@ -203,10 +208,8 @@ svg {
   width: 1600px;
   margin-left: auto;
   margin-right: auto;
-
   background-image: linear-gradient(var(--background-hero), var(--background-hero)),
     url('../img/hero/Img.jpg');
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -225,7 +228,7 @@ svg {
   margin-bottom: 30px;
 }
 
-.hero-button {
+/* .hero-button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -250,9 +253,39 @@ svg {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--back-color);
+} */
+
+.modal-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+  color: var(--back-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px var(--shadow-hero-button);
+  border-radius: 4px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  outline: none;
+
+  transition: background-color 1000ms var(--cubic), box-shadow 250ms var(--cubic);
 }
-.hero-button {
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--hero-button-hover-color);
+  box-shadow: var(--shadow-hero-button);
 }
+
 /* =====================END HERO====================
 /*=====================ABOUT======================*/
 .about-paragraph {
@@ -465,6 +498,7 @@ svg {
   height: 100%;
   border-radius: 50%;
   background-color: var(--social-links-bg-f);
+  transition: background-color 250ms var(--cubic);
 }
 .social-link:hover,
 .social-link:focus {
@@ -479,6 +513,7 @@ svg {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition: fill 750ms var(--cubic);
 }
 .social-link-list {
   justify-content: center;
@@ -520,10 +555,12 @@ svg {
   height: 92px;
   border: 1px solid var(--social-background);
   border-radius: 4px;
+  transition: border 750ms var(--cubic);
 }
 
 .client-link-icons {
   fill: var(--social-background);
+  transition: fill 250ms var(--cubic);
 }
 
 .client-link:hover,
@@ -605,6 +642,7 @@ svg {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--back-color);
+  transition: color 250ms var(--cubic);
 }
 .footer-conteiner-social .connect {
   font-family: Roboto;
@@ -663,6 +701,8 @@ svg {
   padding-left: 22px;
   border-radius: 4px;
   border-style: none;
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
+  box-shadow 250ms var(--cubic);
 }
 
 .nav-button:hover,
@@ -747,26 +787,45 @@ svg {
     visibility var(--time) var(--cubic);
 }
  */
-.portfolio-project-desc {
-  position: absolute;
-  background-color: rgb(228, 76, 228, 0.8);
-  color: #ffffff;
-  padding: 20px;
-  top: 0%;
-  left: 0%;
-  height: 294px;
-  max-width: 100%;
-  overflow: auto;
 
-  transform: translateY(100%);
-  overflow: hidden;
-}
-.projects-links.link {
+ .projects-links.link {
   display: block;
-  position: relative;
-  overflow: hidden;
 }
+
 .portfolio-over-desc {
   position: relative;
   overflow: hidden;
 }
+
+.overlay_portfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--portfolio-overlay-bg-color);
+  color: var(--back-color);
+  overflow: auto;
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--cubic);
+  transition: transform 500ms linear;
+  size: 18px;
+  line-height: 1.56;
+  font-size:var(--main-font);
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  
+}
+
+.projects-blocks:hover .overlay_portfolio,
+.projects-blocks:focus .overlay_portfolio  {
+  transform: translateY(0%);
+}
+.projects-links:hover .overlay_portfolio,
+.projects-links:focus .overlay_portfolio  {
+  transform: translateY(0%);
+}
+
+/*========================backdrop ====================*/
