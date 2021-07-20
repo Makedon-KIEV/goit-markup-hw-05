@@ -201,7 +201,7 @@ svg {
   position: absolute;
   left: 0;
   bottom: -1.5px;
-  top: 55px;
+  top: 53px;
 
   display: block;
   width: 100%;
@@ -448,6 +448,8 @@ svg {
   letter-spacing: 0.03em;
   margin-bottom: 0;
   color: var(--gray-type);
+  margin-bottom: 16px;
+
 }
 .team-list {
   font-family: var(--font-family);
@@ -796,8 +798,7 @@ svg {
   padding: 63px 24px;
 
   transform: translateY(100%);
-  transition: transform 250ms var(--cubic);
-  transition: transform 500ms linear;
+  transition: transform 250ms linear;
   size: 18px;
   line-height: 1.56;
   font-size:var(--main-font);
