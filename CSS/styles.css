@@ -167,7 +167,9 @@ svg {
   margin-right: auto;
   transition: fill 250ms var(--cubic);
 }
-
+.menu-item-link{
+  position: relative;
+}
 .menu-item-link:hover,
 .menu-item-link:focus {
   color: var(--accent-color);
@@ -193,7 +195,20 @@ svg {
   margin-right: 10px;
   transition: fill 250ms var(--cubic);
 }
+.current::after {
+  content: '';
 
+  position: absolute;
+  left: 0;
+  bottom: -1.5px;
+  top: 55px;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
 /*=====================HERO=======================*/
 
 .hero {
@@ -228,6 +243,7 @@ svg {
   color: var(--back-color);
   margin-bottom: 30px;
 }
+
 
 /* .hero-button {
   font-weight: 700;
